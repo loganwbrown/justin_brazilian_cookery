@@ -1,0 +1,36 @@
+<h1>Index Chef</h1>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Show</th>
+      <th>Specialty</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chefs.each do |chef| %>
+    <tr>
+      <td><%= chef.name %></td>
+      <td><%= chef.show %></td>
+      <td><%= chef.specialty %></td>
+      <td><%= link_to 'Show', chef %></td>
+      <td><%= link_to 'Edit', edit_chef_path(chef) %></td>
+      <td><%= link_to 'Destroy', chef, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+    <% end %>
+    </tr>
+
+
+  </tbody>
+
+</table>
+
+<br>
+
+<%= link_to 'New Chef', new_chef_path %>
