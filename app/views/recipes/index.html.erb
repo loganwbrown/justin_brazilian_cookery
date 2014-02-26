@@ -10,9 +10,9 @@
       <th>Cooktime</th>
       <th>Instructions</th>
       <th>Ingredients</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -21,12 +21,12 @@
     <tr>
       <td><%= recipe.title %></td>
       <td><%= recipe.description %></td>
-      <td><%= recipe.cooktime %></td>
+      <td><%= recipe.cook_time %></td>
       <td><%= recipe.instructions %></td>
       <td><%= recipe.ingredients %></td>
       <td><%= link_to 'Show', recipe %></td>
       <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-      <td><%= link_to 'Destroy', recipe, method: :delete, data: {confirm: 'Are you sure?'} %></td>
+      <td><%= link_to 'Delete', recipe_path(recipe.id), method: :delete, confirm: 'Are you sure?' %></td>
     <% end %>
     </tr>
 

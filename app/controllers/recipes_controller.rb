@@ -40,14 +40,18 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-
+    @recipe = Recipe.find(params[:id])
+    @recipe.destroy
+    flash[:notice] = "Your recipe was destroyed"
+    redirect_to recipes_path
+    
   end
+  
 
 
-end
   private
 
   def recipe_params
     params.require(:recipe).permit(:title, :description, :cook_time, :instructions, :picture, :ingredients)
   end
-
+end
