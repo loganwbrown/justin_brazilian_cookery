@@ -1,3 +1,19 @@
 // Place all the styles related to the chefs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#chefs {
+  background: url(http://www.mammamias.co.uk/images/chef.png);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+table tr:nth-child(even) {
+  font-family: january;
+  color: brown;
+}
+
+table tr:nth-child(odd) {
+  font-family: january;
+  color: #4A2702;
+}

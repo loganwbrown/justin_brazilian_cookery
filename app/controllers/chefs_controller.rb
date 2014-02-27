@@ -29,7 +29,7 @@ class ChefsController < ApplicationController
     def update
       @chef = Chef.find(params[:id])
       if @chef.update_attributes(chef_params)
-        flash[:notice] = "#{@chef.name} has been updated."
+        flash[:notice] = "chef has been updated."
         redirect_to chef_path(@chef.id)
       else
         flash[:error] = "There was a problem updating your form."

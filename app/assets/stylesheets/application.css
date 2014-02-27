@@ -8,10 +8,39 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require 'chefs'
+ *= require 'recipes'
  *= require_self
- *= require_tree .
  */
+
 table {
-  width: 80%;
-  
+  width: 60%;
+  margin: 0 auto;
+
+}
+
+* {
+  border: 5px;
+  padding: 5px;
+
+}
+
+body {
+  background: url(http://italianmasterchef.com/wp-content/uploads/2013/02/Rustic-background.jpg);
+  background-repeat: no-repeat;
+}
+
+a:hover {
+  color: gold;
+  style: bold;
+}
+
+a:visited {
+  color: darkgreen;
+}
+
+h1 {
+  text-align: center;
+  font-size: 75px;
+  font-family: serif;
 }
