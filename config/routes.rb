@@ -5,7 +5,12 @@ JusinBrazilianCookery::Application.routes.draw do
 
   root "static_pages#home"
   get "/about" => "static_pages#about"
-  
 
+  delete '/logout' => 'sessions#logout'
+
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+
+  get '/signup' => 'users#new'
 
 end
